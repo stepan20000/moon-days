@@ -1,5 +1,5 @@
 import { Routes } from '@angular/router';
-import { MoonDaysComponentComponent } from './moon-days-component';
+import { MoonDaysComponentComponent } from './pages/moon-days';
 
 
 export const routes: Routes = [
