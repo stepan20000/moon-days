@@ -1,1 +1,6 @@
-<p>moon-day works!</p>
+<div class="moon-day-container">
+  <span>{{ day() }}</span>
+  <span>Moon Day</span>
+  <span>{{ start() | date : datePipeConfig }}</span>
+  <span>{{ end() | date : datePipeConfig }}</span>
+</div>

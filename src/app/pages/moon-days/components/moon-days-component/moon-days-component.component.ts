@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 
 import { MoonDaysService } from '../../services';
 import { MoonDayComponent } from '../moon-day/moon-day.component';
@@ -11,5 +11,6 @@ import { MoonDayComponent } from '../moon-day/moon-day.component';
   providers: [MoonDaysService],
 })
 export class MoonDaysComponentComponent {
-
+  moonDaysService = inject(MoonDaysService);
+  moonDaysWindow = this.moonDaysService.generateMoonDaysWindow();
 }
