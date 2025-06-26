@@ -12,5 +12,5 @@ import { MoonDayComponent } from '../moon-day/moon-day.component';
 })
 export class MoonDaysComponentComponent {
   moonDaysService = inject(MoonDaysService);
-  moonDaysWindow = this.moonDaysService.generateMoonDaysWindow();
+  moonDaysWindow = this.moonDaysService.moonDaysWindow;
 }

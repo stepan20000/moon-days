@@ -1,12 +1,12 @@
-@if (moonDaysWindow.previous; as previous) {
+@if (moonDaysWindow().previous; as previous) {
   <app-moon-day [moonDay]="previous" />
 }
 
-@if (moonDaysWindow.current; as current) {
+@if (moonDaysWindow().current; as current) {
   <app-moon-day [moonDay]="current" />
 }
 
-@if (moonDaysWindow.next; as next) {
+@if (moonDaysWindow().next; as next) {
   <app-moon-day [moonDay]="next" />
 }
 

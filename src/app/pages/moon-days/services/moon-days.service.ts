@@ -1,14 +1,19 @@
-import { Injectable } from '@angular/core';
-import { MoonDaysWindow } from '../entities';
-import { getMoonDaysWindow } from './calculations';
+import { computed, inject, Injectable, Signal } from '@angular/core';
 
-const latitude = 52.2297;
-const longitude = 21.0122;
+import { EMPTY_MOON_DAYS_WINDOW, MoonDaysWindow } from '../entities';
+import { getMoonDaysWindow } from './calculations';
+import { GeolocationService } from '../../../core';
+
 @Injectable({
   providedIn: 'root',
 })
 export class MoonDaysService {
-  generateMoonDaysWindow(): MoonDaysWindow {
-    return getMoonDaysWindow(latitude, longitude);
-  }
+  geolocationService = inject(GeolocationService);
+  geolocation = this.geolocationService.geolocation;
+  moonDaysWindow: Signal<MoonDaysWindow> = computed(() => {
+    const geolocation = this.geolocation();
+    if (!geolocation) return EMPTY_MOON_DAYS_WINDOW;
+
+    return getMoonDaysWindow(geolocation.latitude, geolocation.longitude);
+  });
 }

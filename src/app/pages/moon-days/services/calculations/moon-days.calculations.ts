@@ -1,15 +1,14 @@
 import lune from 'lune';
 import * as SunCalc from 'suncalc';
 
-import { MILLISECONDS_IN_DAY, MoonDay, MoonDaysWindow } from '../../entities';
+import {
+  EMPTY_MOON_DAYS_WINDOW,
+  MILLISECONDS_IN_DAY,
+  MoonDay,
+  MoonDaysWindow,
+} from '../../entities';
 
 const DAYS_SHIFT = 30 * MILLISECONDS_IN_DAY;
-
-const EMPTY_MOON_DAYS_WINDOW: MoonDaysWindow = {
-  previous: null,
-  current: null,
-  next: null,
-};
 
 export const getLastNewMoon: (date: Date) => Date = (date) =>
   lune
