@@ -43,7 +43,7 @@ export const collectMoonRises: (
   lon: number
 ) => Date[] = (from: Date, to: Date, latitude: number, longitude: number) => {
   const rises: Date[] = [];
-  let pointer = new Date(from);
+  const pointer = new Date(from);
 
   while (pointer <= to) {
     const { rise } = SunCalc.getMoonTimes(pointer, latitude, longitude);
