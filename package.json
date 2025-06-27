@@ -18,6 +18,8 @@
     "@angular/platform-browser": "^20.0.5",
     "@angular/platform-browser-dynamic": "^20.0.5",
     "@angular/router": "^20.0.5",
+    "@ngx-translate/core": "^16.0.4",
+    "@ngx-translate/http-loader": "^16.0.1",
     "i": "^0.3.7",
     "lune": "^0.4.0",
     "npm": "^11.4.2",

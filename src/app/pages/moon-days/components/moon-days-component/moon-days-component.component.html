@@ -1,3 +1,5 @@
+<h1>{{ 'MOON_CALENDAR.TITLE' | translate }}</h1>
+
 @if (moonDaysWindow().previous; as previous) {
   <app-moon-day [moonDay]="previous" />
 }
