@@ -6,7 +6,7 @@ import {
   MILLISECONDS_IN_DAY,
   MoonDay,
   MoonDaysWindow,
-} from '../../entities';
+} from '../entities';
 
 const DAYS_SHIFT = 30 * MILLISECONDS_IN_DAY;
 
@@ -56,8 +56,8 @@ export const collectMoonRises: (
 export const getMoonDaysWindow: (
   latitude: number,
   longitude: number,
-  now?: Date
-) => MoonDaysWindow = (latitude, longitude, now = new Date()) => {
+  now: Date
+) => MoonDaysWindow = (latitude, longitude, now) => {
   const lastNewMoon = getLastNewMoon(now);
   const nextNewMoon = getNextNewMoon(now);
 
